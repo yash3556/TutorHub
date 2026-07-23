@@ -84,8 +84,10 @@ useGSAP(() => {
 
         <nav className="hidden items-center gap-4 text-[13px] text-slate-700 xl:gap-5 xl:text-[14px] lg:flex">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="navLink transition hover:text-violet-600">
-              {link.label}
+            <a key={link.label} href={link.href} className="navLink hover:text-violet-600">
+              <span className='inline-block duration-300 ease-in-out hover:scale-110 cursor-pointer'>
+                {link.label}
+                </span>
             </a>
           ))}
         </nav>
@@ -117,10 +119,12 @@ useGSAP(() => {
               <a
                 key={link.label}
                 href={link.href}
-                className="navLink rounded-md px-2 py-2 transition hover:bg-violet-50 hover:text-violet-600"
+                className="navLink rounded-md px-2 py-2 transition hover:bg-violet-50 hover:text-violet-600 duration-300 ease-in-out hover:scale-110 cursor-pointer"
                 onClick={closeMenu}
               >
+              <span className='duration-300 ease-in-out hover:scale-110 cursor-pointer'>
                 {link.label}
+                </span>
               </a>
             ))}
 
