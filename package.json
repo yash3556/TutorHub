@@ -4,5 +4,9 @@
   "workspaces": [
     "client",
     "server"
-  ]
+  ],
+  "dependencies": {
+    "@gsap/react": "^2.1.2",
+    "gsap": "^3.15.0"
+  }
 }
