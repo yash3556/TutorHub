@@ -62,7 +62,7 @@ useGSAP(() => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
+    { label: 'Home', href: '#hero' },
     { label: 'Find Tutor', href: '/FindTutor' },
     { label: 'Become Tutor', href: '/BecomeTutor' },
     { label: 'About', href: '#about' },
