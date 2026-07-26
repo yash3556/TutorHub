@@ -3,6 +3,7 @@ import Navbar from '../../components/common/Navbar'
 import Footer from '../../components/common/Footer'
 import Hero from './Hero'
 import Contact from './Contact'
+import About from './About'
 import FAQ from './FAQ'
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
       <Navbar/>
        <div className='flex-1'>
        <Hero/>
+       <About/>
        <Contact/>
        <FAQ/>
        </div>

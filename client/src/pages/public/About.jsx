@@ -1,0 +1,56 @@
+import React from 'react'
+import AboutImage from '../../assets/AboutImage.png' 
+import { TbTargetArrow } from "react-icons/tb";
+import { FaEye } from "react-icons/fa";
+
+function About() {
+  return (
+    <section id='about'  style={{marginBottom:'100px'}}>
+      <div className='w-full min-h-screen mt-12 lg:mt-20 px-6 md:px-10 lg:px-20"'>
+         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="w-full lg:w-1/2 flex justify-center">
+                <img src={AboutImage} alt='About image' 
+                  className="w-full max-w-sm md:max-w-md lg:max-w-lg rounded-2xl shadow-2xl"/>
+            </div>
+             <div className="w-full lg:w-1/2 text-center lg:text-left">
+                <h3 className="text-blue-500 text-2xl">About us</h3>
+                <h1 className="mt-2 text-3xl md:text-4xl lg:text-5xl font-bold">Our Story</h1>
+                <div >
+                    <p className="mt-4 max-w-xl mx-auto lg:mx-0 text-justify text-gray-600 leading-7">TutorHub was created with one clear purpose: to make quality education accessible to every learner. We believe finding the right tutor should be simple, transparent, and affordable.</p>
+                    <p className='max-w-lg text-justify text-md mt-2'>Our platform connects motivated students with passionate educators, creating meaningful opportunities for growth and success.</p>
+                </div>
+             </div>
+         </div>
+        <div className="mt-16 lg:mt-24 grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+<div className="flex items-start gap-6 rounded-2xl border border-cyan-100 bg-cyan-50 p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <TbTargetArrow className="text-purple-700 text-5xl lg:text-6xl shrink-0" />
+
+    <div>
+      <h2 className="text-2xl font-bold text-slate-800">Our Mission</h2>
+      <p className="mt-3 text-slate-600 leading-7">
+        To connect every student with the right tutor through technology,
+        making personalized learning accessible to everyone.
+      </p>
+    </div>
+  </div>
+
+<div className="flex items-start gap-6 rounded-2xl border border-cyan-100 bg-cyan-50 p-6 md:p-8 shadow-md transition duration-300 hover:-translate-y-2 hover:shadow-xl">
+    <FaEye className="text-sky-500 text-5xl lg:text-6xl shrink-0" />
+
+    <div>
+      <h2 className="text-2xl font-bold text-slate-800">Our Vision</h2>
+      <p className="mt-3 text-slate-600 leading-7">
+        To become India's most trusted learning marketplace where students
+        and tutors grow together.
+      </p>
+    </div>
+  </div>
+
+</div>
+       </div>
+    </section>
+  )
+}
+
+export default About

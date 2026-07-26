@@ -8,7 +8,7 @@ import { MdOutlineSchool } from "react-icons/md";
 import { FaArrowRight } from "react-icons/fa";
 function Hero() {
   return (
-    <section id='hero'>
+    <section id='hero' >
    <div className="w-full min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-10 lg:px-20 py-10 gap-10">
          <div className="w-full lg:w-1/2 text-center lg:text-left">
 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F3E8FF] border border-[#E9D5FF]">
@@ -36,30 +36,32 @@ function Hero() {
                     </span>
               </button>
             </div>
-           <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-              <div className="flex flex-col items-center">
-                <FaStar className='ml-4' style={{color:'#F59E0B',fontSize:'25px'}}/>
-                <h1 className='mt-1'>4.9</h1>
-                <p className='text-md'>Rating</p>
-              </div>
-              <div className="hidden lg:block bg-zinc-200 h-20 w-px"></div>
-             <div className="flex flex-col items-center">
-                <FaUsers className='ml-4' style={{color:'#8B5CF6',fontSize:'25px'}} />
-                <h1 className='mt-1'>5000+</h1>
-                <p>Users</p>
-              </div>
-              <div className="hidden lg:block bg-zinc-200 h-20 w-px"></div>             
-              <div className="flex flex-col items-center">
-                <FaChalkboardTeacher className='ml-4' style={{color:'#06B6D4',fontSize:'25px'}}/>
-                <h1 className='mt-1'>1000+</h1>
-                <p>Tutors</p>
-              </div>
-              <div className="hidden lg:block bg-zinc-200 h-20 w-px"></div>              
-              <div className="flex flex-col items-center">
-                <SiBookstack className='ml-4 ' style={{color:'#A855F7',fontSize:'25px'}}/>
-                <h1 className='mt-1'>30+</h1>
-                <p>Subjects</p>
-              </div>
+   <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+
+            <div className="text-center">
+              <FaStar className="mx-auto text-yellow-500 text-3xl mb-2" />
+              <h2 className="font-bold text-2xl">4.9</h2>
+              <p className="text-gray-500">Rating</p>
+            </div>
+
+            <div className="text-center">
+              <FaUsers className="mx-auto text-violet-600 text-3xl mb-2" />
+              <h2 className="font-bold text-2xl">5000+</h2>
+              <p className="text-gray-500">Users</p>
+            </div>
+
+            <div className="text-center">
+              <FaChalkboardTeacher className="mx-auto text-cyan-500 text-3xl mb-2" />
+              <h2 className="font-bold text-2xl">1000+</h2>
+              <p className="text-gray-500">Tutors</p>
+            </div>
+
+            <div className="text-center">
+              <SiBookstack className="mx-auto text-purple-500 text-3xl mb-2" />
+              <h2 className="font-bold text-2xl">30+</h2>
+              <p className="text-gray-500">Subjects</p>
+            </div>
+
              
             </div>
  
