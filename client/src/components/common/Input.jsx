@@ -1,10 +1,9 @@
 import React from 'react'
 
-function Input() {
+function Input({type,name,placeholder,...props}) {
   return (
-    <div>
-      <h1>Input</h1>
-    </div>
+    <input type={type} name={name} placeholder={placeholder} {...props}/>
+ 
   )
 }
 
