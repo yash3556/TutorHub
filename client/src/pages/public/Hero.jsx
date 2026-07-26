@@ -9,7 +9,7 @@ import { FaArrowRight } from "react-icons/fa";
 function Hero() {
   return (
     <section id='hero' >
-   <div className="w-full min-h-screen flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-10 lg:px-20 py-10 gap-10">
+   <div className="w-full  flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-10 lg:px-20 py-6 gap-8">
          <div className="w-full lg:w-1/2 text-center lg:text-left">
 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F3E8FF] border border-[#E9D5FF]">
               <h1><MdOutlineSchool style={{color:'#8B5CF6',fontSize:'18px' }} /></h1>

@@ -5,8 +5,8 @@ import { FaEye } from "react-icons/fa";
 
 function About() {
   return (
-    <section id='about'  style={{marginBottom:'100px'}}>
-      <div className='w-full min-h-screen mt-12 lg:mt-20 px-6 md:px-10 lg:px-20"'>
+    <section id='about'>
+      <div className='w-full px-6 md:px-10 lg:px-20 py-6 lg:py-8 mt-10'>
          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
             <div className="w-full lg:w-1/2 flex justify-center">
                 <img src={AboutImage} alt='About image' 
