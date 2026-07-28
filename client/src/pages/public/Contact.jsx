@@ -73,14 +73,14 @@ function Contact() {
                  </div>
                </div>
                <div className='flex items-center gap-3 rounded-2xl border border-cyan-100 bg-cyan-50 p-4 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl'>
-                 <MdOutlineEmail style={{color:'#8B5CF6',fontSize:'18px'}} />
+                 <MdOutlineEmail style={{color:'darkpink',fontSize:'18px'}} />
                  <div>
                    <h1 className='text-md mb-2 font-semibold'>Email</h1>
                    <p>support@tutorhub.com</p>
                  </div>
                </div>
                <div className='flex items-center gap-3 rounded-2xl border border-cyan-100 bg-cyan-50 p-4 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl'>
-                 <FiPhone style={{color:'#8B5CF6',fontSize:'18px'}} />
+                 <FiPhone style={{color:'green',fontSize:'18px'}} />
                  <div>
                    <h1 className='text-md mb-2 font-semibold'>Phone</h1>
                    <p>+91 78967 19067</p>

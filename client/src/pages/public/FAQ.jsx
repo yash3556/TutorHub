@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import FaImage from '../../assets/FaImage.png'
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { FaQuestionCircle } from "react-icons/fa";
+
 function FAQ() {
     const [index,setIndex] = useState(null);
 
@@ -31,7 +33,7 @@ function FAQ() {
        <div className='mx-auto flex max-w-7xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8'>
          <div className='flex items-center justify-center'>
            <div className='inline-flex items-center justify-center rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-4 py-2'>
-             <h2 className='text-sm font-semibold text-[#8B5CF6]'>FAQs</h2>
+             <FaQuestionCircle className='mr-2 text-yellow-400'/><h2 className='text-sm font-semibold text-yellow-500'>FAQs</h2>
            </div>
          </div>
 

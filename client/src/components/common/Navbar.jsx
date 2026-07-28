@@ -96,7 +96,7 @@ useGSAP(() => {
           <Link to="/login" className="auth-btn rounded-md bg-yellow-500 px-3 py-2 text-xs font-medium text-white transition hover:bg-yellow-400 sm:text-sm">
             Login
           </Link>
-          <Link to="/signup" className="auth-btn text-xs font-medium text-slate-700 transition hover:text-violet-600 sm:text-sm">
+          <Link to="/signup" className="auth-btn text-xs font-medium text-yellow-500 transition hover:text-yellow-600 sm:text-sm">
             Sign Up
           </Link>
         </div>

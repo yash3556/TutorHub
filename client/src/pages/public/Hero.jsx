@@ -179,7 +179,7 @@ function Hero() {
               <h1 style={{color:'#8B5CF6',fontSize:'14px' }}>India's Trusted Tutor Platform</h1>
             </div>
            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-4">
-              <h1 className="hero-heading" ><span >Find the</span> <span style={{color:'yellow' }}>Perfect Tutor</span></h1>
+              <h1 className="hero-heading" ><span >Find the</span> <span className='text-yellow-500'>Perfect Tutor</span></h1>
               <h1 className="hero-heading2">For Your Learning Journey</h1>
             </div>
             <div className="hero-text mt-4 max-w-xl mx-auto lg:mx-0 text-md">
