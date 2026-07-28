@@ -21,15 +21,15 @@ function Contact() {
              </div>
              <div>
                <h1 className='text-4xl font-bold md:text-5xl'>Let's Build Better</h1>
-               <h1 className='text-4xl font-bold md:text-5xl' style={{color:'#8B5CF6'}}>Learning Together</h1>
+               <h1 className='text-4xl font-bold md:text-5xl text-yellow-500' style={{color:''}}>Learning Together</h1>
                <p className='max-w-xl text-justify mt-5 text-md text-slate-700'>Have questions, suggestions, or need assistance? Our team is here to help students and tutors at every step.</p>
              </div>
              <div className='mt-8 flex flex-col gap-3 sm:flex-row sm:items-center'>
-               <button className='inline-flex w-full items-center justify-center rounded-md border px-4 py-3 bg-[#8B5CF6] text-white transition hover:bg-violet-600 sm:w-auto'>
+               <button className='inline-flex w-full items-center justify-center rounded-md border px-4 py-3 bg-yellow-400 text-white transition hover:bg-yellow-600 sm:w-auto'>
                  <span className='flex items-center gap-2'>Contact us <FaArrowRight /></span>
                </button>
                <button className='inline-flex w-full items-center justify-center rounded-md border-2 border-[#8B5CF6] px-4 py-3 text-slate-900 transition hover:bg-cyan-50 sm:w-auto'>
-                 <span className='flex items-center gap-2'>View FAQs <FaArrowRight /></span>
+                 <a href='#FAQs'><span className='flex items-center gap-2'>View FAQs <FaArrowRight /></span></a>
                </button>
              </div>
              <form className='mt-6'>
@@ -55,7 +55,7 @@ function Contact() {
                  <BiMessageRoundedDots style={{color:'#8B5CF6',fontSize:'20px'}} />
                  <Input type='text' name='message' placeholder='Write your message' className='w-full outline-none bg-transparent placeholder:text-gray-600' />
                </div>
-               <button className='w-full sm:w-auto block rounded-md bg-[#8B5CF6] px-3 py-2 mt-6 text-white transition hover:bg-violet-600' style={{color:'white'}}>
+               <button className='w-full sm:w-auto block rounded-md bg-yellow-500 px-3 py-2 mt-6 text-white transition hover:bg-yellow-600' style={{color:'white'}}>
                  <span className='flex items-center justify-center h-9 gap-2'><BiMessageRoundedDots /> Send Message</span>
                </button>
              </form>

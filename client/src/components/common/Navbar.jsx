@@ -78,13 +78,13 @@ useGSAP(() => {
     <header ref= {navRef}className="sticky top-0 z-50 w-full bg-white shadow-sm">
       <div className="relative flex items-center justify-between gap-3 px-4 py-3 md:px-6">
         <div className="flex items-center gap-2">
-          <PiStudentFill style={{ color: '#8B5CF6', fontSize: '50px' }} className="logoo ml-0" />
-          <h1 className="logo text-xl font-semibold text-slate-800 md:text-2xl">TutorHub</h1>
+          <PiStudentFill style={{ color: 'yellow', fontSize: '50px' }} className="logoo ml-0" />
+          <h1 className="logo text-xl font-semibold text-slate-800  md:text-2xl">TutorHub</h1>
         </div>
 
         <nav className="hidden items-center gap-4 text-[13px] text-slate-700 xl:gap-5 xl:text-[14px] lg:flex">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="navLink hover:text-violet-600">
+            <a key={link.label} href={link.href} className="navLink hover:text-yellow-400">
               <span className='inline-block duration-300 ease-in-out hover:scale-110 cursor-pointer'>
                 {link.label}
                 </span>
@@ -93,7 +93,7 @@ useGSAP(() => {
         </nav>
 
         <div className=" hidden items-center gap-2 lg:flex">
-          <Link to="/login" className="auth-btn rounded-md bg-violet-500 px-3 py-2 text-xs font-medium text-white transition hover:bg-violet-600 sm:text-sm">
+          <Link to="/login" className="auth-btn rounded-md bg-yellow-500 px-3 py-2 text-xs font-medium text-white transition hover:bg-yellow-400 sm:text-sm">
             Login
           </Link>
           <Link to="/signup" className="auth-btn text-xs font-medium text-slate-700 transition hover:text-violet-600 sm:text-sm">

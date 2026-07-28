@@ -179,7 +179,7 @@ function Hero() {
               <h1 style={{color:'#8B5CF6',fontSize:'14px' }}>India's Trusted Tutor Platform</h1>
             </div>
            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-4">
-              <h1 className="hero-heading" ><span >Find the</span> <span style={{color:'#8B5CF6' }}>Perfect Tutor</span></h1>
+              <h1 className="hero-heading" ><span >Find the</span> <span style={{color:'yellow' }}>Perfect Tutor</span></h1>
               <h1 className="hero-heading2">For Your Learning Journey</h1>
             </div>
             <div className="hero-text mt-4 max-w-xl mx-auto lg:mx-0 text-md">
@@ -189,8 +189,8 @@ function Hero() {
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className='hero-btn px-3 py-2 rounded-md border w-43  mr-2'
-               style={{backgroundColor:'#8B5CF6',color:'White'}}>
+              <button className='hero-btn px-3 py-2 rounded-md border w-43  mr-2 bg-yellow-500 hover:bg-yellow-400'
+               style={{color:'White'}}>
                 <span className='flex gap-2 items-center h-10 ml-3'>Find a Tutor  <FaArrowRight/></span></button>
               <button className='hero-btn border-2 px-3 py-2 w-45 rounded-md'
                      style={{borderColor:'#8B5CF6'}}>
