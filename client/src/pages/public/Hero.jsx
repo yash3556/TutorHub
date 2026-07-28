@@ -48,9 +48,6 @@ function Hero() {
     
   }, ">")
 
-
-   
-
    .from(".hero-img", {
     y:-100,
     x: 100,
@@ -82,74 +79,57 @@ function Hero() {
     duration: 1,
     stagger: 0.20,
     ease: "power3.out",
-    scrollTrigger:{
-      trigger: ".stat",
-      start: "top 100%", 
-      end:"bottom 60%",
-    //  markers:true,
-      scrub:2,
-    }
+    
+    
   }, "-=0.2")
    });
 
    mm.add("(max-width:1023px)", () => {
 
-  const tl = gsap.timeline();
+   let tl=gsap.timeline();
 
-   tl.from(".hero-img", {
+    tl.from(".hero-img", {
     y: 80,
     opacity: 0,
     duration: 1,
-    delay:1,
-  }, )
+  })
 
-  .from(".badge", {
+   tl.from(".badge", {
     y: -30,
     opacity: 0,
     duration: 0.6,
   },"<")
 
-  .from(".hero-heading", {
-    x:-250,
+  tl.from(".hero-heading", {
+    scale:0.7,
     opacity: 0,
     duration: 1,
     ease: "power3.out",
   }, "-=0.2")
 
-  .from(".hero-heading2", {
-    x: 250,
+  tl.from(".hero-heading2", {
+    scale:0.7,
     opacity: 0, 
     duration: 1,
     ease: "power3.out",
   }, "<")
+});
 
-  gsap.from(".hero-text", {
+ mm.add("(max-width:1024px)", () => {
+
+   gsap.from(".hero-text", {
     y: 30,
     opacity: 0,
     duration: 0.8,
     ease: "power3.out",
     scrollTrigger:{
       trigger:".hero-text",
+      start:"top bottom",
       end: "bottom 70%",
       scrub: 2, 
       
-    }
-  })
-
-  gsap.from(".hero-btn", {
-    y: 30,
-    opacity: 0,
-    duration: 0.6,
-    stagger: 0.15,
-    ease: "back.out(1.7)",
-    scrollTrigger:{
-      trigger:".hero-btn",
-      start: "top bottom",
-      end: "bottom 70%",
-      scrub: 2, 
       
     }
-    
   })
 
   gsap.from(".stat", {
@@ -165,12 +145,28 @@ function Hero() {
       scrub: 2,
       
     }
-  });
+  })
 
-});
+   gsap.from(".hero-btn", {
+    y: 30,
+    opacity: 0,
+    duration: 0.6,
+    stagger: 0.15,
+    ease: "back.out(1.7)",
+    scrollTrigger:{
+      trigger:".hero-btn",
+      start: "top bottom",
+      end: "bottom 70%",
+      scrub: 2, 
+        
+    }
+  })
+ });
 
-  return () => mm.revert();
-}, { scope: heroRef });
+
+
+   return () => mm.revert();
+ }, { scope: heroRef });
 
   return (
 
