@@ -5,6 +5,8 @@ import Hero from './Hero'
 import Contact from './Contact'
 import About from './About'
 import FAQ from './FAQ'
+import Privacy from './Privacy'
+import Terms from './Terms'
 
 function Home() {
   return (
@@ -15,6 +17,8 @@ function Home() {
        <About/>
        <Contact/>
        <FAQ/>
+       <Privacy/>
+       <Terms/>
        </div>
           <Footer/>
         
