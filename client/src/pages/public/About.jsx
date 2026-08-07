@@ -6,6 +6,7 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function About() {
@@ -14,48 +15,105 @@ const aboutRef = useRef(null);
 
 useGSAP(() => {
 
-  // Image 
-  gsap.from(".about-image", {
-    x: -150,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".about-image",
-      start: "top 80%",
-      end: "top 45%",
-      scrub: 1.5,
-    },
+  const mm = gsap.matchMedia();
+
+  mm.add("(min-width: 1024px)", () => {
+
+    // Image
+    gsap.from(".about-image", {
+      x: -150,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-image",
+        start: "top 80%",
+        end: "top 45%",
+        scrub: 1.5,
+      },
+    });
+
+    // Content
+    gsap.from(".about-content", {
+      x: 150,
+      opacity: 0,
+      duration: 1,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: ".about-content",
+        start: "top 80%",
+        end: "top 45%",
+        scrub: 1.5,
+      },
+    });
+
+    // Cards
+    gsap.from(".about-card", {
+      y: 80,
+      scale: 0.7,
+      opacity: 0,
+      // stagger: 0.2,
+      ease: "expo.out",
+      scrollTrigger: {
+        trigger: ".about-card",
+        start: "top 90%",
+        end: "top 55%",
+        scrub: 1.5,
+      },
+    });
+
   });
 
-  // Content 
-  gsap.from(".about-content", {
-    x: 150,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".about-content",
-      start: "top 80%",
-      end: "top 45%",
-      scrub: 1.5,
-    },
-  });
+  // mm.add("(max-width: 1023px)", () => {
 
-  // Cards
-  gsap.from(".about-card", {
-    scale: 0.7,
-    opacity: 0,
-     y: 80,
-    ease: "expo.out",
-    scrollTrigger: {
-      trigger: ".about-card",
-      start: "top 95%",
-      end: "top 75%",
-      scrub: 1.5,
-      // markers:true,
-    },
-  });
+  //   // Image
+  //   gsap.from(".about-image", {
+  //     y: 80,
+  //     scale: 0.9,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".about-image",
+  //       start: "top 90%",
+  //       end: "top 70%",
+  //       scrub: 1,
+  //       markers:true,
+  //     },
+  //   });
+
+  //   // Content
+  //   gsap.from(".about-content", {
+  //     y: 80,
+  //     opacity: 0,
+  //     duration: 1,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".about-content",
+  //       start: "top 90%",
+  //       end: "top 70%",
+  //       scrub: 1,
+  //     },
+  //   });
+
+  //   // Cards
+  //   gsap.from(".about-card", {
+  //     y: 60,
+  //     scale: 0.85,
+  //     opacity: 0,
+  //     stagger: 0.15,
+  //     ease: "power2.out",
+  //     scrollTrigger: {
+  //       trigger: ".about-card",
+  //       start: "top 95%",
+  //       end: "top 75%",
+  //       scrub: 1,
+  //     },
+  //   });
+
+  // });
+
+  return () => mm.revert();
 
 }, { scope: aboutRef });
 

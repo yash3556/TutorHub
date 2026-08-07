@@ -35,13 +35,13 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
       }
     });
 
-    gsap.from(".about-img", {
+    gsap.from(".contact-img", {
       x:200,
       duration: 2,
       ease:"power4.out",
       opacity:0,
       scrollTrigger:{
-        trigger:".about-img",
+        trigger:".contact-img",
         start:"top 90%",
         end:"bottom 100%",
         //markers:true,
@@ -161,7 +161,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
            </div>
            <div className='w-full lg:w-[48%] flex flex-col items-center justify-start gap-8'>
              <div className='w-full max-w-xl overflow-hidden rounded-[30px] bg-white shadow-2xl'>
-               <img src={ContactImage} alt='Contact' className='about-img w-full h-auto object-cover' />
+               <img src={ContactImage} alt='Contact' className='contact-img w-full h-auto object-cover' />
              </div>
              <div className=' contact-details grid w-full grid-cols-1 gap-4 sm:grid-cols-2'>
                <div className=' flex items-center gap-3 rounded-2xl border border-cyan-100 bg-cyan-50 p-4 shadow-lg transition duration-300 hover:-translate-y-1 hover:shadow-xl'>

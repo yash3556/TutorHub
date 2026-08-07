@@ -15,6 +15,7 @@ gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 function Hero() {
   const heroRef = useRef();
+  
   useGSAP(() => {
 
   const mm = gsap.matchMedia();
@@ -84,84 +85,129 @@ function Hero() {
   }, "-=0.2")
    });
 
-   mm.add("(max-width:1023px)", () => {
+//    mm.add("(max-width:1023px)", () => {
 
-   let tl=gsap.timeline();
+//    let tl=gsap.timeline();
 
-    tl.from(".hero-img", {
-    y: 80,
-    opacity: 0,
-    duration: 1,
-  })
+//     tl.from(".hero-img", {
+//     y: 80,
+//     opacity: 0,
+//     duration: 1,
+//   })
 
-   tl.from(".badge", {
-    y: -30,
-    opacity: 0,
-    duration: 0.6,
-  },"<")
+//    tl.from(".badge", {
+//     y: -30,
+//     opacity: 0,
+//     duration: 0.6,
+//   },"<")
 
-  tl.from(".hero-heading", {
-    scale:0.7,
-    opacity: 0,
-    duration: 1,
-    ease: "power3.out",
-  }, "-=0.2")
+//   tl.from(".hero-heading", {
+//     scale:0.7,
+//     opacity: 0,
+//     duration: 1,
+//     ease: "power3.out",
+//   }, "-=0.2")
 
-  tl.from(".hero-heading2", {
-    scale:0.7,
-    opacity: 0, 
-    duration: 1,
-    ease: "power3.out",
-  }, "<")
-});
+//   tl.from(".hero-heading2", {
+//     scale:0.7,
+//     opacity: 0, 
+//     duration: 1,
+//     ease: "power3.out",
+//   }, "<")
 
- mm.add("(max-width:1024px)", () => {
-
-   gsap.from(".hero-text", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    ease: "power3.out",
-    scrollTrigger:{
-      trigger:".hero-text",
-      start:"top bottom",
-      end: "bottom 70%",
-      scrub: 2, 
+//     gsap.from(".hero-text", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.8,
+//     ease: "power3.out",
+//     scrollTrigger:{
+//       trigger:".hero-text",
+//       start:"top bottom",
+//       end: "bottom 70%",
+//       scrub: 2, 
       
       
-    }
-  })
+//     }
+//   })
 
-  gsap.from(".stat", {
-    y: 30,
-    opacity: 0,
-    duration: 0.8,
-    stagger: 0.15,
-    ease: "power3.out",
-    scrollTrigger: {
-      trigger: ".stat",
-      start: "top 100%",
-      end: "bottom 70%",
-      scrub: 2,
+//   gsap.from(".stat", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.8,
+//     stagger: 0.15,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".stat",
+//       start: "top 100%",
+//       end: "bottom 70%",
+//       scrub: 2,
       
-    }
-  })
+//     }
+//   })
 
-   gsap.from(".hero-btn", {
-    y: 30,
-    opacity: 0,
-    duration: 0.6,
-    stagger: 0.15,
-    ease: "back.out(1.7)",
-    scrollTrigger:{
-      trigger:".hero-btn",
-      start: "top bottom",
-      end: "bottom 70%",
-      scrub: 2, 
+//    gsap.from(".hero-btn", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.6,
+//     stagger: 0.15,
+//     ease: "back.out(1.7)",
+//     scrollTrigger:{
+//       trigger:".hero-btn",
+//       start: "top bottom",
+//       end: "bottom 70%",
+//       scrub: 2, 
         
-    }
-  })
- });
+//     }
+//   })
+// });
+
+//  mm.add("(max-width:1023px)", () => {
+
+//    gsap.from(".hero-text", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.8,
+//     ease: "power3.out",
+//     scrollTrigger:{
+//       trigger:".hero-text",
+//       start:"top bottom",
+//       end: "bottom 70%",
+//       scrub: 2, 
+      
+      
+//     }
+//   })
+
+//   gsap.from(".stat", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.8,
+//     stagger: 0.15,
+//     ease: "power3.out",
+//     scrollTrigger: {
+//       trigger: ".stat",
+//       start: "top 100%",
+//       end: "bottom 70%",
+//       scrub: 2,
+      
+//     }
+//   })
+
+//    gsap.from(".hero-btn", {
+//     y: 30,
+//     opacity: 0,
+//     duration: 0.6,
+//     stagger: 0.15,
+//     ease: "back.out(1.7)",
+//     scrollTrigger:{
+//       trigger:".hero-btn",
+//       start: "top bottom",
+//       end: "bottom 70%",
+//       scrub: 2, 
+        
+//     }
+//   })
+//  });
 
 
 

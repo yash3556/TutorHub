@@ -84,7 +84,7 @@ useGSAP(() => {
 
         <nav className="hidden items-center gap-4 text-[13px] text-slate-700 xl:gap-5 xl:text-[14px] lg:flex">
           {navLinks.map((link) => (
-            <a key={link.label} href={link.href} className="navLink hover:text-yellow-400">
+            <a key={link.label} href={link.href} className="navLink hover:border-b-3 hover:text-yellow-400">
               <span className='inline-block duration-300 ease-in-out hover:scale-110 cursor-pointer'>
                 {link.label}
                 </span>
