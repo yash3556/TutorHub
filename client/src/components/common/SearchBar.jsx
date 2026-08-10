@@ -1,10 +1,9 @@
 import React from 'react'
 
-function SearchBar() {
+function SearchBar({type,name,placeholder,...props}) {
   return (
-    <div>
-      <h1>SearchBar</h1>
-    </div>
+    <input type={type} name={name} placeholder={placeholder} {...props}/>
+ 
   )
 }
 

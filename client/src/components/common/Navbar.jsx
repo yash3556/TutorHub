@@ -64,7 +64,7 @@ useGSAP(() => {
   const navLinks = [
     { label: 'Home', href: '#hero' },
     { label: 'Find Tutor', href: '/FindTutor' },
-    { label: 'Become Tutor', href: '/BecomeTutor' },
+    { label: 'Become Tutor', href: '/teacher' },
     { label: 'About', href: '#about' },
     { label: 'Contact', href: '#contact' },
     { label: 'FAQs', href: '#faq' },
