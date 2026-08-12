@@ -38,7 +38,7 @@ function Footer() {
   return (
     <footer ref={footerRef} 
       style={{
-        background: "linear-gradient(90deg, #FBC02D, #A855F7, #EC4899)",
+        background: "#EAB308",
       }}
       className="w-full py-10 text-white"
     >

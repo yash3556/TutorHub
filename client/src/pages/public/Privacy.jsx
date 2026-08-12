@@ -46,7 +46,7 @@ useGSAP(() => {
         start: "top 80%",
         end: "top 45%",
         scrub: 1,
-        markers:true,
+        // markers:true,
       },
     });
 
@@ -59,8 +59,8 @@ useGSAP(() => {
       duration: 1,
       ease: "expo.out",
       scrollTrigger: {
-        trigger: ".feature",
-        start: "top 80%",
+        trigger: ".privacy-card",
+        start: "top 100%",
         end: "top 40%",
         scrub: 1.2,
       },
@@ -83,7 +83,7 @@ useGSAP(() => {
     // Floating Image
     gsap.to(".privacy-image img", {
       y: -15,
-      duration: 2.5,
+      duration: 5,
       repeat: -1,
       yoyo: true,
       ease: "sine.inOut",
@@ -135,9 +135,9 @@ useGSAP(() => {
           </div>
 
 
-          <div className="feature grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
+          <div className="privacy-card grid grid-cols-1 sm:grid-cols-3 gap-6 mt-10">
 
-            <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-cyan-50 p-6 text-left shadow-xl shadow-cyan-100/40 transition duration-300 hover:-translate-y-1">
+            <div className=" rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-cyan-50 p-6 text-left shadow-xl shadow-cyan-100/40  hover:-translate-y-1">
               <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-green-600 shadow-sm shadow-slate-200">
                 <BsFillShieldLockFill className="text-2xl" />
               </div>
@@ -147,7 +147,7 @@ useGSAP(() => {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-violet-50 p-6 text-left shadow-xl shadow-violet-100/30 transition duration-300 hover:-translate-y-1">
+            <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-violet-50 p-6 text-left shadow-xl shadow-violet-100/30  hover:-translate-y-1">
               <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-blue-600 shadow-sm shadow-slate-200">
                 <FaUserAlt className="text-2xl" />
               </div>
@@ -157,7 +157,7 @@ useGSAP(() => {
               </p>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-pink-50 p-6 text-left shadow-xl shadow-pink-100/30 transition duration-300 hover:-translate-y-1">
+            <div className="rounded-3xl border border-slate-200 bg-linear-to-br from-slate-50 via-white to-pink-50 p-6 text-left shadow-xl shadow-pink-100/30  hover:-translate-y-1">
               <div className="inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-white text-pink-600 shadow-sm shadow-slate-200">
                 <FaBook className="text-2xl" />
               </div>
@@ -170,7 +170,7 @@ useGSAP(() => {
           </div>
         </div>
 
-        <div className="w-full lg:w-1/2 flex justify-center">
+        <div className="privacy-image w-full lg:w-1/2 flex justify-center">
           <div className="relative max-w-lg overflow-hidden rounded-[36px] bg-linear-to-br from-slate-100 via-white to-blue-50 p-4 shadow-2xl shadow-blue-200/30">
             <div className="absolute -right-8 -top-6 h-28 w-28 rounded-full bg-blue-200/40 blur-2xl" />
             <div className="absolute -left-6 bottom-10 h-20 w-20 rounded-full bg-yellow-200/40 blur-2xl" />

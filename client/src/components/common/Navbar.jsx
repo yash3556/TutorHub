@@ -25,9 +25,8 @@ useGSAP(() => {
     
     opacity: 0,
     scale:0,
-    
   },
-  {
+  { 
     scale:1,
     opacity: 1,
     duration: 1,
@@ -93,17 +92,17 @@ useGSAP(() => {
         </nav>
 
         <div className=" hidden items-center gap-2 lg:flex">
-          <Link to="/login" className="auth-btn rounded-md bg-yellow-500 px-3 py-2 text-xs font-medium text-white transition hover:bg-yellow-400 sm:text-sm">
+          <Link to="/login" className="auth-btn rounded-md bg-yellow-500 px-3 py-2 text-xs font-medium text-white hover:bg-yellow-400 sm:text-sm">
             Login
           </Link>
-          <Link to="/signup" className="auth-btn text-xs font-medium text-yellow-500 transition hover:text-yellow-600 sm:text-sm">
+          <Link to="/signup" className="auth-btn text-xs font-medium text-yellow-500 hover:text-yellow-600 sm:text-sm">
             Sign Up
           </Link>
         </div>
 
         <button
           type="button"
-          className="toggle flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700 transition hover:bg-slate-100 lg:hidden"
+          className="toggle flex h-10 w-10 items-center justify-center rounded-full border border-slate-200 text-slate-700  hover:bg-slate-100 lg:hidden"
           aria-label="Toggle navigation menu"
           aria-expanded={menuOpen}
           onClick={() => setMenuOpen((open) => !open)}
