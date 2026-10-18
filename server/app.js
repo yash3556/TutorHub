@@ -8,8 +8,10 @@ const path = require("path");
 dotenv.config({ path: path.join(__dirname, ".env") });
 const app = express();
 const allowedOrigins = new Set(
-    (process.env.CLIENT_URL || "http://localhost:5173")
-        .split(",")
+    [
+        ...(process.env.CLIENT_URL || "http://localhost:5173").split(","),
+        "https://tutorhub-th.vercel.app",
+    ]
         .map((origin) => origin.trim())
         .filter(Boolean)
 );
