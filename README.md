@@ -77,12 +77,12 @@ TutorHub is deployed as two services:
 
 1. Import the repository into Vercel and set **Root Directory** to `client`.
 2. Select Vite (or let Vercel detect it). Use `npm run build` and `dist` as the output directory.
-3. Add `VITE_API_URL` for the Production environment, with the Render service's origin only, for example `https://your-service.onrender.com` (no `/api` suffix or trailing slash). If you also configure it for Preview, add the corresponding exact preview origin(s) to Render's `CLIENT_URL`.
-4. Deploy, then copy the final Vercel production origin into Render's `CLIENT_URL` and redeploy/restart the Render service.
+3. Do not set `VITE_API_URL` in Vercel Production. Production API requests use the same-origin `/api` path and `client/vercel.json` proxies them to the Render service. `VITE_API_URL` remains an optional local-development override (defaults to `http://localhost:3000`).
+4. Deploy the frontend. Keep Render's `CLIENT_URL` set to the exact Vercel origin; the Vercel proxy forwards the browser request to Render while keeping the browser request same-origin, so auth cookies are not dependent on third-party-cookie support.
 
-The API URL is a Vite build-time setting, so redeploy the frontend after changing it. The backend uses credentialed CORS and production `SameSite=None; Secure` HTTP-only auth cookies for the separately hosted frontend and API. Browsers that block third-party cookies can still prevent cookie-based sign-in when using the default `vercel.app` and `onrender.com` domains; using frontend and API custom domains under the same parent domain avoids that cross-site-cookie limitation.
+The API routing is configured at build/deploy time, so redeploy the frontend after changing it. The backend uses credentialed CORS and production `SameSite=None; Secure` HTTP-only auth cookies. Vercel's same-origin proxy avoids browser third-party-cookie restrictions while keeping JWTs inaccessible to frontend JavaScript.
 
-Do not commit `.env` files or place MongoDB, SMTP, or JWT secrets in Vercel variables. `VITE_API_URL` is public configuration and belongs in Vercel; the other variables belong in Render.
+Do not commit `.env` files or place MongoDB, SMTP, or JWT secrets in Vercel variables. `VITE_API_URL` is an optional public local-development override and should not be set for Vercel Production; the backend variables belong in Render.
 
 ### Post-deployment smoke test
 
