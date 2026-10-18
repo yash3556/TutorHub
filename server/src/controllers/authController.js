@@ -2,6 +2,12 @@ const userSchema = require('../models/User');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
+const authCookieOptions = () => ({
+    httpOnly: true,
+    secure: process.env.NODE_ENV === "production",
+    sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+});
+
 exports.signup = async (req,res)=>{
     try {
         const {fullName,email,phone,password,confirmPassword,role } = req.body;
@@ -46,8 +52,8 @@ exports.signup = async (req,res)=>{
         await newUser.save();
 
         const token = jwt.sign({id:newUser._id},process.env.JWT_SECRET,{expiresIn:'7d'});
-        res.cookie('token',token,{
-            httpOnly:true,
+        res.cookie('token', token, {
+            ...authCookieOptions(),
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
 
@@ -87,8 +93,8 @@ exports.login = async (req,res)=>{
         }
 
         const token = jwt.sign({id:userExists._id},process.env.JWT_SECRET,{expiresIn:'7d'});
-        res.cookie('token',token,{
-            httpOnly:true,
+        res.cookie('token', token, {
+            ...authCookieOptions(),
             maxAge: 7 * 24 * 60 * 60 * 1000,
         });
 
@@ -117,10 +123,7 @@ exports.login = async (req,res)=>{
 }
 
 exports.logout = async (req, res) => {
-    res.clearCookie("token", {
-        httpOnly: true,
-        sameSite: "lax",
-    });
+    res.clearCookie("token", authCookieOptions());
 
     return res.status(200).json({
         message: "Logged out successfully",

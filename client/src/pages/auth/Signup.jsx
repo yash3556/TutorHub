@@ -14,6 +14,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useToast } from '../../context/ToastContext'
+import { AUTH_API_URL } from '../../services/authService'
 
 function Signup() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ function Signup() {
       }
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/auth/signup",
+          `${AUTH_API_URL}/signup`,
           formData,
           {
             withCredentials:true

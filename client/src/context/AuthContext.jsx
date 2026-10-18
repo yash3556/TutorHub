@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import axios from "axios";
+import { AUTH_API_URL } from "../services/authService";
 
 const AuthContext = createContext(null);
 
@@ -20,7 +21,7 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     try {
-      await axios.post("http://localhost:3000/api/auth/logout", {}, { withCredentials: true });
+      await axios.post(`${AUTH_API_URL}/logout`, {}, { withCredentials: true });
     } catch (err) {
       // ignore network errors but still clear local state
     } finally {

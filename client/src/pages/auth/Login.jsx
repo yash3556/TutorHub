@@ -9,6 +9,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from '../../context/AuthContext'
 import { useToast } from '../../context/ToastContext'
+import { AUTH_API_URL } from '../../services/authService'
 
 
 
@@ -37,7 +38,7 @@ function Login() {
       }
       try {
         const res = await axios.post(
-          "http://localhost:3000/api/auth/login",formData,
+          `${AUTH_API_URL}/login`,formData,
           {
            withCredentials:true
           }

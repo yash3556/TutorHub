@@ -204,7 +204,11 @@ exports.deleteTeacherAccount = async (req, res, next) => {
     const userId = req.user._id;
     await Promise.all([TeacherProfile.deleteOne({ user: userId }), Request.deleteMany({ teacher: userId }), Review.deleteMany({ teacher: userId })]);
     await User.deleteOne({ _id: userId });
-    res.clearCookie("token", { httpOnly: true, sameSite: "lax" });
+    res.clearCookie("token", {
+      httpOnly: true,
+      secure: process.env.NODE_ENV === "production",
+      sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+    });
     return res.json({ message: "Tutor account deleted." });
   } catch (error) {
     next(error);

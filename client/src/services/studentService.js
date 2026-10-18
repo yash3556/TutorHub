@@ -1,6 +1,7 @@
 import axios from "axios";
+import { API_BASE_URL } from "./api";
 
-const API_URL = "http://localhost:3000/api/student";
+const API_URL = `${API_BASE_URL}/student`;
 
 export const getAvailableTeachers = async (filters = {}) => {
   const params = new URLSearchParams();
