@@ -1,11 +1,38 @@
-import React from 'react'
+import React, { createContext, useContext, useEffect, useState } from "react";
+import axios from "axios";
 
-function AuthContext() {
-  return (
-    <div>
-      <h1>AuthContext</h1>
-    </div>
-  )
+const AuthContext = createContext(null);
+
+export function AuthProvider({ children }) {
+  const [user, setUser] = useState(() => {
+    try {
+      const raw = localStorage.getItem("user");
+      return raw ? JSON.parse(raw) : null;
+    } catch (e) {
+      return null;
+    }
+  });
+
+  useEffect(() => {
+    if (user) localStorage.setItem("user", JSON.stringify(user));
+    else localStorage.removeItem("user");
+  }, [user]);
+
+  const logout = async () => {
+    try {
+      await axios.post("http://localhost:3000/api/auth/logout", {}, { withCredentials: true });
+    } catch (err) {
+      // ignore network errors but still clear local state
+    } finally {
+      setUser(null);
+    }
+  };
+
+  return <AuthContext.Provider value={{ user, setUser, logout }}>{children}</AuthContext.Provider>;
 }
 
-export default AuthContext
+export function useAuth() {
+  return useContext(AuthContext);
+}
+
+export default AuthContext;

@@ -115,15 +115,15 @@ useGSAP(() => {
      <section ref={faqRef} id='faq' className="py-16 bg-slate-50">
        <div className='mx-auto flex max-w-7xl flex-col gap-6 px-4 text-center sm:px-6 lg:px-8'>
          <div className='flex items-center justify-center'>
-           <div className='faq-title inline-flex items-center justify-center rounded-full border border-[#E9D5FF] bg-[#F3E8FF] px-4 py-2'>
-             <FaQuestionCircle className='mr-2 text-yellow-400'/><h2 className='text-sm font-semibold text-yellow-500'>FAQs</h2>
+           <div className='faq-title inline-flex items-center justify-center rounded-lg border border-primary-light bg-primary-light px-4 py-2'>
+             <FaQuestionCircle className='mr-2 text-accent'/><h2 className='text-sm font-semibold text-primary'>FAQs</h2>
            </div>
          </div>
 
          <div className='faq-text mx-auto max-w-3xl space-y-4'>
            <h1 className='text-3xl font-bold leading-tight text-slate-900 sm:text-4xl lg:text-5xl'>Frequently Asked Questions</h1>
-           <p className='text-blue-600 text-lg font-medium'>Got questions? We’ve got answers.</p>
-           <p className='mx-auto max-w-2xl text-base leading-8 text-slate-600'>Find quick answers to the most common questions about <span className='text-blue-700'>TutorHub</span>.</p>
+           <p className='text-primary text-lg font-medium'>Got questions? We’ve got answers.</p>
+           <p className='mx-auto max-w-2xl text-base leading-8 text-slate-600'>Find quick answers to the most common questions about <span className='text-primary'>TutorHub</span>.</p>
          </div>
 
          <div className=' mt-12 grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-center'>

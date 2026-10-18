@@ -49,6 +49,10 @@ TutorLink
 └── server
 ```
 
+## Contact form email
+
+Contact-form submissions are sent to `yashkush660@gmail.com` by the server only when SMTP is configured. Set `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`, `SMTP_USER`, and `SMTP_PASS` in `server/.env` (see `server/.env.example`), then restart the backend. For Gmail, use an app password, not your account password. If SMTP is missing or delivery fails, the form reports an error and the message is not stored; ask visitors to email the address directly until delivery is configured. Never commit `.env` or publish SMTP credentials.
+
 ## 👨‍💻 Team Members
 
 - Yash Kushwaha

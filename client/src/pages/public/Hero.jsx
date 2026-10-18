@@ -220,12 +220,12 @@ function Hero() {
    <div className="w-full  flex flex-col-reverse lg:flex-row items-center justify-between px-6 md:px-10 lg:px-20 py-6 gap-8">
 
          <div className="w-full lg:w-1/2 text-center lg:text-left">
-<div className="badge inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F3E8FF] border border-[#E9D5FF]">
-              <h1><MdOutlineSchool style={{color:'#8B5CF6',fontSize:'18px' }} /></h1>
-              <h1 style={{color:'#8B5CF6',fontSize:'14px' }}>India's Trusted Tutor Platform</h1>
+<div className="badge inline-flex items-center gap-2 rounded-lg border border-primary-light bg-primary-light px-4 py-2">
+  <MdOutlineSchool className="text-lg text-primary" />
+  <p className="text-sm font-semibold text-primary">India's Trusted Tutor Platform</p>
             </div>
            <div className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mt-4">
-              <h1 className="hero-heading" ><span >Find the</span> <span className='text-yellow-500'>Perfect Tutor</span></h1>
+  <h1 className="hero-heading" ><span >Find the</span> <span className='text-primary'>Perfect Tutor</span></h1>
               <h1 className="hero-heading2">For Your Learning Journey</h1>
             </div>
             <div className="hero-text mt-4 max-w-xl mx-auto lg:mx-0 text-md">
@@ -235,11 +235,9 @@ function Hero() {
               </p>
             </div>
             <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <button className='hero-btn px-3 py-2 rounded-md border w-43  mr-2 bg-yellow-500 hover:bg-yellow-400'
-               style={{color:'White'}}>
+              <button className='hero-btn mr-2 w-43 rounded-md border border-primary bg-primary px-3 py-2 text-white hover:bg-primary-hover'>
                 <span className='flex gap-2 items-center h-10 ml-3'>Find a Tutor  <FaArrowRight/></span></button>
-              <button className='hero-btn border-2 px-3 py-2 w-45 rounded-md'
-                     style={{borderColor:'#8B5CF6'}}>
+              <button className='hero-btn w-45 rounded-md border-2 border-primary px-3 py-2 text-primary hover:bg-primary-light'>
                   <span className='flex items-center h-9 gap-2 '>
                     Become a Tutor <FaArrowRight/>
                     </span>

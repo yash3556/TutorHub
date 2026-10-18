@@ -1,0 +1,59 @@
+.site-footer {
+  color: #fff;
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+.site-footer h1,
+.site-footer h2,
+.site-footer h3,
+.site-footer h4,
+.site-footer h5,
+.site-footer h6 {
+  color: currentColor;
+}
+
+.site-footer a {
+  transition: color 160ms ease;
+}
+
+.site-footer li {
+  min-width: 0;
+}
+
+.site-footer li a {
+  overflow-wrap: anywhere;
+}
+
+.site-footer a:hover {
+  color: var(--color-accent);
+}
+
+.footer-brand-icon {
+  color: currentColor;
+}
+
+.footer-social-icon {
+  border-color: currentColor;
+}
+
+.footer-social-icon svg {
+  color: currentColor !important;
+}
+
+html[data-theme="dark"] .site-footer {
+  border-top: 1px solid var(--color-border);
+  background: linear-gradient(135deg, #211b35, #151326 72%) !important;
+  color: #f1edf9;
+}
+
+html[data-theme="dark"] .site-footer .text-white {
+  color: #f1edf9 !important;
+}
+
+html[data-theme="dark"] .site-footer hr {
+  border-color: rgb(241 237 249 / 22%);
+}
+
+html[data-theme="dark"] .site-footer a:hover {
+  color: #f5bd52;
+}

@@ -120,11 +120,11 @@ useGSAP(() => {
             Privacy at
           </h1>
 
-          <h1 className=" text-4xl sm:text-5xl lg:text-6xl font-bold text-yellow-400">
+          <h1 className="text-4xl font-bold text-primary sm:text-5xl lg:text-6xl">
             TutorHub
           </h1>
 
-          <div className="w-20 h-1.5 bg-yellow-400 rounded-full mt-4 mx-auto lg:mx-0"></div>
+          <div className="mx-auto mt-4 h-1.5 w-20 rounded-full bg-accent lg:mx-0"></div>
 
 
           <p className=" mt-6 text-gray-600 leading-8 max-w-xl mx-auto lg:mx-0">
@@ -173,7 +173,6 @@ useGSAP(() => {
         <div className="privacy-image w-full lg:w-1/2 flex justify-center">
           <div className="relative max-w-lg overflow-hidden rounded-[36px] bg-linear-to-br from-slate-100 via-white to-blue-50 p-4 shadow-2xl shadow-blue-200/30">
             <div className="absolute -right-8 -top-6 h-28 w-28 rounded-full bg-blue-200/40 blur-2xl" />
-            <div className="absolute -left-6 bottom-10 h-20 w-20 rounded-full bg-yellow-200/40 blur-2xl" />
             <img
               src={privacyImage}
               alt="Privacy Illustration"

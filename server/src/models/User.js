@@ -22,6 +22,18 @@ const userSchema = new mongoose.Schema({
         type:String,
         enum:['student','teacher'],
         required:true,
+    },
+    avatarUrl:{
+        type:String,
+        default:"",
+    },
+    emailVerified:{
+        type:Boolean,
+        default:false,
+    },
+    phoneVerified:{
+        type:Boolean,
+        default:false,
     }
 },
    {
